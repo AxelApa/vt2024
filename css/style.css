@@ -1,1 +1,82 @@
-/* Denna fil skall innehålla din CSS kod */
+* {
+    margin: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica,Arial , sans-serif, sans-serif;
+    min-height: 100vh;
+}
+
+#wrapper {
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "hd"
+    "mn"
+    "ft"
+    ;
+    grid-template-rows: 1fr auto 0.5fr ;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    grid-area: hd;
+}
+
+header h1 {
+    margin: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    padding-top: 1.5rem;
+    grid-area: mn;
+}
+
+section {
+    padding: 20px;
+    background-color: #ededed;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+.portfolio-item {
+    margin-bottom: 1rem;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+    grid-area: ft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
